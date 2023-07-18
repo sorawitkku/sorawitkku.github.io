@@ -1,10 +1,47 @@
 
+html {
+  background-color: rgb(255, 137, 68);
+}
 body {
-  background-color: black;
+  width: 600px;
+  background-color: rgb(165, 165, 165);
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
+  border: 5px solid rgb(255, 226, 63);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+ul{
+  color: white;
+  text-align: center;
+  font-family: verdana;
+  font-size: 45px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+}
+
+li.simpson1{
+  color: white;
+  border-style: dotted;
+  border-color: red;
+}
+
+li.simpson2{
+  color: white;
+  border-style: dotted;
+  border-color: red;
+
 }
 
 h1 {
-    color: white;
+    color: blue;
     text-align: center;
     font-family: verdana;
     font-size: 45px;
