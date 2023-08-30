@@ -38,14 +38,14 @@
         const group1Divs = document.querySelectorAll(".group1");
         const row2Divs = document.querySelectorAll(".row2");
         const row4Divs = document.querySelectorAll(".row4");
+
+        let clickStatusRow2 = Array.from({ length: row2Divs.length }, () => false);
+        let clickStatusRow4 = Array.from({ length: row4Divs.length }, () => false);
         
 
-        let clicknumrow2 = 0;
-        let clicknumrow4 = 0;
-
         group1Divs.forEach((div) => { div.onclick = (e) => (e.target.style.backgroundColor = bgChange());});
-        row2Divs.forEach((div) => {div.onclick = (e) => {if (clicknumrow2 === 0) {e.target.style.backgroundColor = bgChange(); clicknumrow2 += 1;}};});
-        row4Divs.forEach((div) => {div.onclick = (e) => {if (clicknumrow4 === 0) {e.target.style.backgroundColor = bgChange(); clicknumrow4 += 1;}};});
+        row2Divs.forEach((div, index) => { div.onclick = (e) => { if (!clickStatusRow2[index]) { e.target.style.backgroundColor = bgChange(); clickStatusRow2[index] = true;} };});
+        row4Divs.forEach((div, index) => { div.onclick = (e) => { if (!clickStatusRow4[index]) { e.target.style.backgroundColor = bgChange();clickStatusRow4[index] = true;} };});
     </script>
   </body>
 </html>
